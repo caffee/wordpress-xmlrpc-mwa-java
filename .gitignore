@@ -1,0 +1,6 @@
+*~
+*.lock
+*.DS_Store
+.directory
+.classpath
+.project
