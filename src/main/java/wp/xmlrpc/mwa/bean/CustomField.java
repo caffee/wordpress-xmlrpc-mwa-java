@@ -76,7 +76,7 @@ public final class CustomField {
         return object;
     }
 
-    // Note: custom field id is not parse when create the post because it cause error
+    // Note: Not parsing custom field id when create the post because it cause error
     public final static Map<String, Object > parseStruct(final CustomField customField) {
 
         Map<String, Object > map = new HashMap<String, Object> ();
