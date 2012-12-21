@@ -76,7 +76,8 @@ public interface MetaWeblog {
      * <p>Retrieve a list of recent posts.</p>
      * <code>metaWeblog.getRecentPosts</code>
      *
-     * @param numberOfPosts Optional - set number of recent post record to fetch 
+     * @param numberOfPosts Optional - set number of recent post record(s) to fetch.
+     *                      Fetch all record(s) if value less than or equal to 0
      * @return Collection of Post object as defined members of struct
      * @throws MetaWeblogException Response enhanced or standard exception message
      * 

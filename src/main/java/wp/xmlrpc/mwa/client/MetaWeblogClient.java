@@ -116,10 +116,16 @@ public final class MetaWeblogClient implements MetaWeblog {
      * {@inheritDoc}
      */
     public final Post[] getRecentPosts(final int numberOfPosts) throws MetaWeblogException {
-        Object[] params = new Object[]{-1,                                          // int blogid: Not applicable will be ignored.
-                                       this.metaWeblogConfig.getLogin(),            // String username
-                                       this.metaWeblogConfig.getPassword(),         // String password 
-                                       (numberOfPosts < 1 ) ? 100 : numberOfPosts}; // int numberOfPosts: Optional.
+
+        Object[] params = new Object[(numberOfPosts > 0) ? 4 : 3];
+
+        params[0] = -1;                                  // int blogid: Not applicable will be ignored.
+        params[1] = this.metaWeblogConfig.getLogin();    // String username
+        params[2] = this.metaWeblogConfig.getPassword(); // String password 
+
+        if(numberOfPosts > 0) { 
+            params[3] = numberOfPosts;                   // int numberOfPosts: Optional.
+        }
 
         Object[] object = (Object[])this.execute(MetaWeblogMethod.GET_RECENT_POSTS, params);
 
