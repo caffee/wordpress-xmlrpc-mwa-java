@@ -102,6 +102,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final Post getPost(final int postId) throws MetaWeblogException {
         Object[] params = new Object[]{postId,                               // int postid
                                        this.metaWeblogConfig.getLogin(),     // String username
@@ -115,6 +116,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final Post[] getRecentPosts(final int numberOfPosts) throws MetaWeblogException {
 
         Object[] params = new Object[(numberOfPosts > 0) ? 4 : 3];
@@ -135,6 +137,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final String newPost(final Post post, final Publish publish) throws MetaWeblogException {
         Object[] params = new Object[]{-1,                                  // int blogid: Not applicable will be ignored.
                                        this.metaWeblogConfig.getLogin(),    // String username
@@ -148,6 +151,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final boolean editPost(final int postId, final Post post, final Publish publish) throws MetaWeblogException {
         Object[] params = new Object[]{postId,                              // int postid
                                        this.metaWeblogConfig.getLogin(),    // String username
@@ -161,6 +165,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final boolean deletePost(final int postId) throws MetaWeblogException {
         Object[] params = new Object[]{"appkey",                            // String appkey: Not applicable will be ignored.
                                        postId,                              // int postid
@@ -174,6 +179,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final Category[] getCategories(final int blogId) throws MetaWeblogException {
         Object[] params = new Object[]{blogId,                               // int blogid
                                        this.metaWeblogConfig.getLogin(),     // String username
@@ -187,6 +193,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final Media newMediaObject(final int blogId, final MediaData mediaData) throws MetaWeblogException {
         Object[] params = new Object[]{blogId,                              // int blogid
                                        this.metaWeblogConfig.getLogin(),    // String username
@@ -201,6 +208,7 @@ public final class MetaWeblogClient implements MetaWeblog {
     /**
      * {@inheritDoc}
      */
+    @Override
     public final UsersBlog[] getUsersBlogs() throws MetaWeblogException {
         Object[] params = new Object[]{"appkey",                             // String appkey: Not applicable will be ignored.
                                        this.metaWeblogConfig.getLogin(),     // String username
