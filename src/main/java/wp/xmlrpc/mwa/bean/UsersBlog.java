@@ -127,4 +127,50 @@ public final class UsersBlog {
 
         return usersBlog;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((blogId == null) ? 0 : blogId.hashCode());
+        result = prime * result + ((blogName == null) ? 0 : blogName.hashCode());
+        result = prime * result + ((endPoint == null) ? 0 : endPoint.hashCode());
+        result = prime * result + (isAdmin ? 1231 : 1237);
+        result = prime * result + ((url == null) ? 0 : url.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        UsersBlog other = (UsersBlog) obj;
+        if (blogId == null) {
+            if (other.blogId != null)
+                return false;
+        } else if (!blogId.equals(other.blogId))
+            return false;
+        if (blogName == null) {
+            if (other.blogName != null)
+                return false;
+        } else if (!blogName.equals(other.blogName))
+            return false;
+        if (endPoint == null) {
+            if (other.endPoint != null)
+                return false;
+        } else if (!endPoint.equals(other.endPoint))
+            return false;
+        if (isAdmin != other.isAdmin)
+            return false;
+        if (url == null) {
+            if (other.url != null)
+                return false;
+        } else if (!url.equals(other.url))
+            return false;
+        return true;
+    }
 }

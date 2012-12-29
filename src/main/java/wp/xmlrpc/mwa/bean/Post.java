@@ -21,6 +21,7 @@
  */
 package wp.xmlrpc.mwa.bean;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -528,5 +529,177 @@ public final class Post {
 
     private final void parsePostId(final Object object) {
         this.postId = (object instanceof String) ? Integer.parseInt((String)object) : (Integer)object;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + Arrays.hashCode(categoriesName);
+        result = prime * result + Arrays.hashCode(customFields);
+        result = prime * result + ((dateCreated == null) ? 0 : dateCreated.hashCode());
+        result = prime * result + ((dateCreatedGmt == null) ? 0 : dateCreatedGmt.hashCode());
+        result = prime * result + ((dateModified == null) ? 0 : dateModified.hashCode());
+        result = prime * result + ((dateModifiedGmt == null) ? 0 : dateModifiedGmt.hashCode());
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        result = prime * result + ((enclosure == null) ? 0 : enclosure.hashCode());
+        result = prime * result + ((link == null) ? 0 : link.hashCode());
+        result = prime * result + ((mtAllowComments == null) ? 0 : mtAllowComments.hashCode());
+        result = prime * result + ((mtAllowPings == null) ? 0 : mtAllowPings.hashCode());
+        result = prime * result + ((mtExcerpt == null) ? 0 : mtExcerpt.hashCode());
+        result = prime * result + ((mtKeywords == null) ? 0 : mtKeywords.hashCode());
+        result = prime * result + ((mtTextMore == null) ? 0 : mtTextMore.hashCode());
+        result = prime * result + ((permaLink == null) ? 0 : permaLink.hashCode());
+        result = prime * result + postId;
+        result = prime * result + ((postStatus == null) ? 0 : postStatus.hashCode());
+        result = prime * result + ((sticky == null) ? 0 : sticky.hashCode());
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
+        result = prime * result + ((userId == null) ? 0 : userId.hashCode());
+        result = prime * result + ((wpAuthorDisplayName == null) ? 0 : wpAuthorDisplayName.hashCode());
+        result = prime * result + ((wpAuthorId == null) ? 0 : wpAuthorId.hashCode());
+        result = prime * result + ((wpMoreText == null) ? 0 : wpMoreText.hashCode());
+        result = prime * result + ((wpPassword == null) ? 0 : wpPassword.hashCode());
+        result = prime * result + ((wpPostFormat == null) ? 0 : wpPostFormat.hashCode());
+        result = prime * result + ((wpPostThumbnail == null) ? 0 : wpPostThumbnail.hashCode());
+        result = prime * result + ((wpSlug == null) ? 0 : wpSlug.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Post other = (Post) obj;
+        if (!Arrays.equals(categoriesName, other.categoriesName))
+            return false;
+        if (!Arrays.equals(customFields, other.customFields))
+            return false;
+        if (dateCreated == null) {
+            if (other.dateCreated != null)
+                return false;
+        } else if (!dateCreated.equals(other.dateCreated))
+            return false;
+        if (dateCreatedGmt == null) {
+            if (other.dateCreatedGmt != null)
+                return false;
+        } else if (!dateCreatedGmt.equals(other.dateCreatedGmt))
+            return false;
+        if (dateModified == null) {
+            if (other.dateModified != null)
+                return false;
+        } else if (!dateModified.equals(other.dateModified))
+            return false;
+        if (dateModifiedGmt == null) {
+            if (other.dateModifiedGmt != null)
+                return false;
+        } else if (!dateModifiedGmt.equals(other.dateModifiedGmt))
+            return false;
+        if (description == null) {
+            if (other.description != null)
+                return false;
+        } else if (!description.equals(other.description))
+            return false;
+        if (enclosure == null) {
+            if (other.enclosure != null)
+                return false;
+        } else if (!enclosure.equals(other.enclosure))
+            return false;
+        if (link == null) {
+            if (other.link != null)
+                return false;
+        } else if (!link.equals(other.link))
+            return false;
+        if (mtAllowComments == null) {
+            if (other.mtAllowComments != null)
+                return false;
+        } else if (!mtAllowComments.equals(other.mtAllowComments))
+            return false;
+        if (mtAllowPings == null) {
+            if (other.mtAllowPings != null)
+                return false;
+        } else if (!mtAllowPings.equals(other.mtAllowPings))
+            return false;
+        if (mtExcerpt == null) {
+            if (other.mtExcerpt != null)
+                return false;
+        } else if (!mtExcerpt.equals(other.mtExcerpt))
+            return false;
+        if (mtKeywords == null) {
+            if (other.mtKeywords != null)
+                return false;
+        } else if (!mtKeywords.equals(other.mtKeywords))
+            return false;
+        if (mtTextMore == null) {
+            if (other.mtTextMore != null)
+                return false;
+        } else if (!mtTextMore.equals(other.mtTextMore))
+            return false;
+        if (permaLink == null) {
+            if (other.permaLink != null)
+                return false;
+        } else if (!permaLink.equals(other.permaLink))
+            return false;
+        if (postId != other.postId)
+            return false;
+        if (postStatus == null) {
+            if (other.postStatus != null)
+                return false;
+        } else if (!postStatus.equals(other.postStatus))
+            return false;
+        if (sticky == null) {
+            if (other.sticky != null)
+                return false;
+        } else if (!sticky.equals(other.sticky))
+            return false;
+        if (title == null) {
+            if (other.title != null)
+                return false;
+        } else if (!title.equals(other.title))
+            return false;
+        if (userId == null) {
+            if (other.userId != null)
+                return false;
+        } else if (!userId.equals(other.userId))
+            return false;
+        if (wpAuthorDisplayName == null) {
+            if (other.wpAuthorDisplayName != null)
+                return false;
+        } else if (!wpAuthorDisplayName.equals(other.wpAuthorDisplayName))
+            return false;
+        if (wpAuthorId == null) {
+            if (other.wpAuthorId != null)
+                return false;
+        } else if (!wpAuthorId.equals(other.wpAuthorId))
+            return false;
+        if (wpMoreText == null) {
+            if (other.wpMoreText != null)
+                return false;
+        } else if (!wpMoreText.equals(other.wpMoreText))
+            return false;
+        if (wpPassword == null) {
+            if (other.wpPassword != null)
+                return false;
+        } else if (!wpPassword.equals(other.wpPassword))
+            return false;
+        if (wpPostFormat == null) {
+            if (other.wpPostFormat != null)
+                return false;
+        } else if (!wpPostFormat.equals(other.wpPostFormat))
+            return false;
+        if (wpPostThumbnail == null) {
+            if (other.wpPostThumbnail != null)
+                return false;
+        } else if (!wpPostThumbnail.equals(other.wpPostThumbnail))
+            return false;
+        if (wpSlug == null) {
+            if (other.wpSlug != null)
+                return false;
+        } else if (!wpSlug.equals(other.wpSlug))
+            return false;
+        return true;
     }
 }

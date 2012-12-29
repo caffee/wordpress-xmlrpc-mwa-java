@@ -21,6 +21,7 @@
  */
 package wp.xmlrpc.mwa.bean;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -94,5 +95,45 @@ public final class MediaData {
         }
 
         return map;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + Arrays.hashCode(base64Binary);
+        result = prime * result + ((fileName == null) ? 0 : fileName.hashCode());
+        result = prime * result + ((mineType == null) ? 0 : mineType.hashCode());
+        result = prime * result + ((overwrite == null) ? 0 : overwrite.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        MediaData other = (MediaData) obj;
+        if (!Arrays.equals(base64Binary, other.base64Binary))
+            return false;
+        if (fileName == null) {
+            if (other.fileName != null)
+                return false;
+        } else if (!fileName.equals(other.fileName))
+            return false;
+        if (mineType == null) {
+            if (other.mineType != null)
+                return false;
+        } else if (!mineType.equals(other.mineType))
+            return false;
+        if (overwrite == null) {
+            if (other.overwrite != null)
+                return false;
+        } else if (!overwrite.equals(other.overwrite))
+            return false;
+        return true;
     }
 }
