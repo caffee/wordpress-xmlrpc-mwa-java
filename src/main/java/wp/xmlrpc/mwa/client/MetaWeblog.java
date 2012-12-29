@@ -35,8 +35,6 @@ import wp.xmlrpc.mwa.exception.MetaWeblogException;
  * augmented with additional WordPress-specific functionality.
  * This support was added in WordPress 1.5.0.</p>
  * 
- * <p>http://codex.wordpress.org/XML-RPC_MetaWeblog_API</p>
- * 
  * <p>Supported API-</p>
  * <ul>
  * <li>metaWeblog.getPost</li>
@@ -57,6 +55,8 @@ import wp.xmlrpc.mwa.exception.MetaWeblogException;
  * 
  * @author  Lee
  * @version 1.0.0
+ * 
+ * @see <a href="http://codex.wordpress.org/XML-RPC_MetaWeblog_API">http://codex.wordpress.org/XML-RPC_MetaWeblog_API</a>
  */
 public interface MetaWeblog {
 

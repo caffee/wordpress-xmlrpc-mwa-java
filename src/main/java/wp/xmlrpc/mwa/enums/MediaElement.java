@@ -23,7 +23,6 @@ package wp.xmlrpc.mwa.enums;
 
 /**
  * The enum {@code MediaElement} defined members of media struct. 
- * It is the elements of in RSS 2.0
  *
  * @author  Lee
  * @version 1.0.0

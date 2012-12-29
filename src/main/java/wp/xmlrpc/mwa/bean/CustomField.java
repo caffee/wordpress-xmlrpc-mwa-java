@@ -27,7 +27,7 @@ import java.util.Map;
 import wp.xmlrpc.mwa.enums.CustomFieldElement;
 
 /**
- * The class {@code CustomField} is a bean class 
+ * {@code CustomField} bean class 
  * 
  * @author  Lee
  * @version 1.0.0

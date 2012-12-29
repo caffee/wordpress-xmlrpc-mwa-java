@@ -29,7 +29,7 @@ import wp.xmlrpc.mwa.enums.MediaDataElement;
 import wp.xmlrpc.mwa.enums.Overwrite;
 
 /**
- * The class {@code MediaData} is a bean class 
+ * {@code MediaData} bean class 
  * 
  * @author  Lee
  * @version 1.0.0

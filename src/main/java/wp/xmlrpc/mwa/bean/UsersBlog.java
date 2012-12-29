@@ -27,7 +27,7 @@ import java.util.Map;
 import wp.xmlrpc.mwa.enums.UsersBlogElement;
 
 /**
- * The class {@code UsersBlog} is a bean class 
+ * {@code UsersBlog} bean class 
  * 
  * @author  Lee
  * @version 1.0.0

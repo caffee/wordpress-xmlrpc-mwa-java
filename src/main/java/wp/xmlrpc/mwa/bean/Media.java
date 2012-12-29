@@ -27,7 +27,7 @@ import java.util.Map;
 import wp.xmlrpc.mwa.enums.MediaElement;
 
 /**
- * The class {@code Media} is a bean class 
+ * {@code Media} bean class 
  * 
  * @author  Lee
  * @version 1.0.0

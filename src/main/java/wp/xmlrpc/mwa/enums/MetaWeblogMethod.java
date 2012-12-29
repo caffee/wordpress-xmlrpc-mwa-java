@@ -22,7 +22,7 @@
 package wp.xmlrpc.mwa.enums;
 
 /**
- * The enum {@code MetaWeblogMethod} is the list of metaWeblogAPI method.
+ * The enum {@code MetaWeblogMethod} defined list of metaWeblogAPI method.
  *
  * @author  Lee
  * @version 1.0.0

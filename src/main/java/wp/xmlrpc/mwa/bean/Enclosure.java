@@ -27,7 +27,7 @@ import java.util.Map;
 import wp.xmlrpc.mwa.enums.EnclosureElement;
 
 /**
- * The class {@code Enclosure} is a bean class 
+ * {@code Enclosure} bean class 
  * 
  * @author  Lee
  * @version 1.0.0

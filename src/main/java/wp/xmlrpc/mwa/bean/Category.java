@@ -27,7 +27,7 @@ import java.util.Map;
 import wp.xmlrpc.mwa.enums.CategoryElement;
 
 /**
- * The class {@code Category} is a bean class 
+ * {@code Category} bean class 
  * 
  * @author  Lee
  * @version 1.0.0

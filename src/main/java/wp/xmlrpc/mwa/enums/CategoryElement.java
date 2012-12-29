@@ -22,8 +22,7 @@
 package wp.xmlrpc.mwa.enums;
 
 /**
- * The enum {@code CategoryElement} defined members of category struct. 
- * It is the elements of in RSS 2.0
+ * The enum {@code CategoryElement} defined members of category struct.
  *
  * @author  Lee
  * @version 1.0.0

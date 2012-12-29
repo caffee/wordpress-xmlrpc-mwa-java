@@ -29,7 +29,7 @@ import java.util.Map;
 import wp.xmlrpc.mwa.enums.PostElement;
 
 /**
- * The class {@code Post} is a bean class 
+ * {@code Post} bean class 
  * 
  * @author  Lee
  * @version 1.0.0
