@@ -8,13 +8,12 @@
   <packaging>jar</packaging>
 
   <name>WordPress XML-RPC MetaWeblogAPI</name>
-  <url>http://maven.apache.org</url>
-  <description><![CDATA[
-  WordPress supports the metaWeblog XML-RPC API, augmented with additional WordPress-specific functionality
-  ]]></description>
+  <url>http://codex.wordpress.org/XML-RPC_MetaWeblog_API</url>
+  <description>WordPress supports metaWeblog XML-RPC API, augmented with additional WordPress-specific functionality</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.7</jdk.version>
   </properties>
 
   <dependencies>
@@ -30,4 +29,41 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <charset>${project.build.sourceEncoding}</charset>
+          <docencoding>${project.build.sourceEncoding}</docencoding>
+          <links>
+            <link>http://docs.oracle.com/javase/7/docs/api/</link>
+          </links>
+          <show>package</show>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License, Version 3.0</name>
+      <url>http://www.gnu.org/licenses</url>
+      <distribution>manual</distribution>
+    </license>
+  </licenses>
+
 </project>
