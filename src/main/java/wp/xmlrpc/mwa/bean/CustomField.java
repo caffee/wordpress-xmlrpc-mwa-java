@@ -77,9 +77,9 @@ public final class CustomField {
     }
 
     // Note: Not parsing custom field id when create the post because it cause error
-    public final static Map<String, Object > parseStruct(final CustomField customField) {
+    public final static Map<String, Object> parseStruct(final CustomField customField) {
 
-        Map<String, Object > map = new HashMap<String, Object> ();
+        Map<String, Object> map = new HashMap<String, Object> ();
 
         if(customField.getKey() != null && !customField.getKey().isEmpty()) {
             map.put(CustomFieldElement.KEY.toString(), customField.getKey());

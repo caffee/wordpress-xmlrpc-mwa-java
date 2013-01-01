@@ -74,9 +74,9 @@ public final class MediaData {
         this.overwrite = overwrite.getBooleanValue();
     }
 
-    public final static Map<String, Object > parseStruct(final MediaData mediaData) {
+    public final static Map<String, Object> parseStruct(final MediaData mediaData) {
 
-        Map<String, Object > map = new HashMap<String, Object> ();
+        Map<String, Object> map = new HashMap<String, Object> ();
 
         if(mediaData.getFileName() != null && !mediaData.getFileName().isEmpty()) {
             map.put(MediaDataElement.FILE_NAME.toString(), mediaData.getFileName());

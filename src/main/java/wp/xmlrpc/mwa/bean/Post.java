@@ -283,9 +283,9 @@ public final class Post {
         this.enclosure = enclosure;
     }
 
-    public final static Map<String, Object > parseStruct(final Post post) {
+    public final static Map<String, Object> parseStruct(final Post post) {
 
-        Map<String, Object > map = new HashMap<String, Object> ();
+        Map<String, Object> map = new HashMap<String, Object> ();
 
         if(post.getPostId() > 0) {
             map.put(PostElement.POST_ID.toString(), post.getPostId());

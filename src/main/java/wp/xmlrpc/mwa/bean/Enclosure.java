@@ -65,9 +65,9 @@ public final class Enclosure {
         this.type = type;
     }
 
-    public final static Map<String, Object > parseStruct(final Enclosure enclosure) {
+    public final static Map<String, Object> parseStruct(final Enclosure enclosure) {
 
-        Map<String, Object > map = new HashMap<String, Object> ();
+        Map<String, Object> map = new HashMap<String, Object> ();
 
         if(enclosure.getUrl() != null && !enclosure.getUrl().isEmpty()) {
             map.put(EnclosureElement.URL.toString(), enclosure.getUrl());
