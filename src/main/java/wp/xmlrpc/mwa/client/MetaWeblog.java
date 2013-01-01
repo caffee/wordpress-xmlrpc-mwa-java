@@ -90,7 +90,9 @@ public interface MetaWeblog {
      * <code>metaWeblog.newPost</code>
      *
      * @param post Post object as defined members of struct
-     * @param publish Publish the post or leave it as draft
+     * @param publish Publish the post or leave it as draft.
+     *                <strong>Note:</strong> This value will be overridden by Post object,
+     *                if postStatus is defined
      * @return Blog post unique id number
      * @throws MetaWeblogException Response enhanced or standard exception message
      * 
@@ -104,7 +106,9 @@ public interface MetaWeblog {
      *
      * @param postId Blog post unique id number
      * @param post Post object as defined members of struct
-     * @param publish Publish the post or leave it as draft
+     * @param publish Publish the post or leave it as draft.
+     *                <strong>Note:</strong> This value will be overridden by Post object,
+     *                if postStatus is defined
      * @return Boolean values as action indicator
      * @throws MetaWeblogException Response enhanced or standard exception message
      * 
