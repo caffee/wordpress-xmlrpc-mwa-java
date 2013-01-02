@@ -101,7 +101,11 @@ public final class UsersBlog {
     public final static UsersBlog valueOf(final Object object) {
 
         @SuppressWarnings("unchecked")
-        Map<String, Object> map = (HashMap<String, Object>)object;
+        Map<String, Object> map = (object == null) ? null : (HashMap<String, Object>)object;
+
+        if(map == null || map.size() == 0) {
+            return null;
+        }
 
         UsersBlog usersBlog = new UsersBlog();
 

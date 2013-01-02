@@ -67,6 +67,10 @@ public final class CustomField {
 
     public final static Object[] parseStruct(final CustomField[] customFields) {
 
+        if(customFields == null) {
+            return null;
+        }
+
         Object[] object = new Object[customFields.length];
 
         for (int i=0; i<customFields.length; i++) {
@@ -78,6 +82,10 @@ public final class CustomField {
 
     // Note: Not parsing custom field id when create the post because it cause error
     public final static Map<String, Object> parseStruct(final CustomField customField) {
+
+        if (customField == null) {
+            return null;
+        }
 
         Map<String, Object> map = new HashMap<String, Object> ();
 
@@ -110,7 +118,11 @@ public final class CustomField {
     public final static CustomField valueOf(final Object object) {
 
         @SuppressWarnings("unchecked")
-        Map<String, Object> map = (HashMap<String, Object>)object;
+        Map<String, Object> map = (object == null) ? null : (HashMap<String, Object>)object;
+
+        if(map == null || map.size() == 0) {
+            return null;
+        }
 
         CustomField customField = new CustomField();
 

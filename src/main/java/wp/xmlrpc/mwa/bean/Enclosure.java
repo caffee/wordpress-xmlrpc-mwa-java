@@ -67,7 +67,11 @@ public final class Enclosure {
 
     public final static Map<String, Object> parseStruct(final Enclosure enclosure) {
 
-        Map<String, Object> map = new HashMap<String, Object> ();
+        if(enclosure == null) {
+            return null;
+        }
+
+        Map<String, Object> map = new HashMap<String, Object>();
 
         if(enclosure.getUrl() != null && !enclosure.getUrl().isEmpty()) {
             map.put(EnclosureElement.URL.toString(), enclosure.getUrl());
@@ -87,7 +91,11 @@ public final class Enclosure {
     public final static Enclosure valueOf(final Object object) {
 
         @SuppressWarnings("unchecked")
-        Map<String, Object> map = (HashMap<String, Object>)object;
+        Map<String, Object> map = (object == null) ? null : (HashMap<String, Object>)object;
+
+        if(map == null || map.size() == 0) {
+            return null;
+        }
 
         Enclosure enclosure = new Enclosure();
 

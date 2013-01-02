@@ -119,7 +119,11 @@ public final class Category {
     public final static Category valueOf(final Object object) {
 
         @SuppressWarnings("unchecked")
-        Map<String, Object> map = (HashMap<String, Object>)object;
+        Map<String, Object> map = (object == null) ? null : (HashMap<String, Object>)object;
+
+        if(map == null || map.size() == 0) {
+            return null;
+        }
 
         Category category = new Category();
 
