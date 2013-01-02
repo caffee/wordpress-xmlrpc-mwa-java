@@ -22,7 +22,7 @@
 package wp.xmlrpc.mwa.enums;
 
 /**
- * Defined enum {@code PostType} are post and page.
+ * The enum {@code PostType} defined post type(s) that WordPress uses by default
  *
  * @author  Lee
  * @version 1.0.0
