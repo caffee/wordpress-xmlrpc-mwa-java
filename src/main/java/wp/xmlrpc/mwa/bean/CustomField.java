@@ -87,7 +87,7 @@ public final class CustomField {
             return null;
         }
 
-        Map<String, Object> map = new HashMap<String, Object> ();
+        Map<String, Object> map = new HashMap<String, Object>();
 
         if(customField.getKey() != null && !customField.getKey().isEmpty()) {
             map.put(CustomFieldElement.KEY.toString(), customField.getKey());

@@ -299,7 +299,7 @@ public final class Post {
             return null;
         }
 
-        Map<String, Object> map = new HashMap<String, Object> ();
+        Map<String, Object> map = new HashMap<String, Object>();
 
         if(post.getTitle() != null && !post.getTitle().isEmpty()) {
             map.put(PostElement.TITLE.toString(), post.getTitle());
