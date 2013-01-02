@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import wp.xmlrpc.mwa.enums.PostElement;
+import wp.xmlrpc.mwa.enums.PostType;
 
 /**
  * {@code Post} bean class 
@@ -40,6 +41,7 @@ public final class Post {
     private int postId;
     private String title;
     private String description;
+    private PostType postType;
     private String link;
     private String userId;
     private Date dateCreated;
@@ -89,6 +91,14 @@ public final class Post {
 
     public final void setDescription(final String description) {
         this.description = description;
+    }
+
+    public final PostType getPostType() {
+        return this.postType;
+    }
+
+    public final void setPostType(final PostType postType) {
+        this.postType = postType;
     }
 
     public final String getLink() {
@@ -291,10 +301,6 @@ public final class Post {
 
         Map<String, Object> map = new HashMap<String, Object> ();
 
-        if(post.getPostId() > 0) {
-            map.put(PostElement.POST_ID.toString(), post.getPostId());
-        }
-
         if(post.getTitle() != null && !post.getTitle().isEmpty()) {
             map.put(PostElement.TITLE.toString(), post.getTitle());
         }
@@ -303,12 +309,8 @@ public final class Post {
             map.put(PostElement.DESCRIPTION.toString(), post.getDescription());
         }
 
-        if(post.getLink() != null && !post.getLink().isEmpty()) {
-            map.put(PostElement.LINK.toString(), post.getLink());
-        }
-
-        if(post.getUserId() != null && !post.getUserId().isEmpty()) {
-            map.put(PostElement.USER_ID.toString(), post.getUserId());
+        if(post.getPostType() != null) {
+            map.put(PostElement.POST_TYPE.toString(), post.getPostType().toString());
         }
 
         if(post.getDateCreated() != null) {
@@ -317,22 +319,6 @@ public final class Post {
 
         if(post.getDateCreatedGmt() != null) {
             map.put(PostElement.DATE_CREATED_GMT.toString(), post.getDateCreatedGmt());
-        }
-
-        if(post.getDateModified() != null) {
-            map.put(PostElement.DATE_MODIFIED.toString(), post.getDateModified());
-        }
-
-        if(post.getDateModifiedGmt() != null) {
-            map.put(PostElement.DATE_MODIFIED_GMT.toString(), post.getDateModifiedGmt());
-        }
-
-        if(post.getWpPostThumbnail() != null && !post.getWpPostThumbnail().isEmpty()) {
-            map.put(PostElement.WP_POST_THUMBNAIL.toString(), post.getWpPostThumbnail());
-        }
-
-        if(post.getPermaLink() != null && !post.getPermaLink().isEmpty()) {
-            map.put(PostElement.PERMA_LINK.toString(), post.getPermaLink());
         }
 
         if(post.getCategoriesName() != null && post.getCategoriesName().length > 0) {
@@ -347,8 +333,8 @@ public final class Post {
             map.put(PostElement.MT_EXCERPT.toString(), post.getMtExcerpt());
         }
 
-        if(post.getWpMoreText() != null && !post.getWpMoreText().isEmpty()) {
-            map.put(PostElement.WP_MORE_TEXT.toString(), post.getWpMoreText());
+        if(post.getMtTextMore() != null && !post.getMtTextMore().isEmpty()) {
+            map.put(PostElement.MT_TEXT_MORE.toString(), post.getMtTextMore());
         }
 
         if(post.getMtAllowComments() != null) {
@@ -560,6 +546,7 @@ public final class Post {
         result = prime * result + ((permaLink == null) ? 0 : permaLink.hashCode());
         result = prime * result + postId;
         result = prime * result + ((postStatus == null) ? 0 : postStatus.hashCode());
+        result = prime * result + ((postType == null) ? 0 : postType.hashCode());
         result = prime * result + ((sticky == null) ? 0 : sticky.hashCode());
         result = prime * result + ((title == null) ? 0 : title.hashCode());
         result = prime * result + ((userId == null) ? 0 : userId.hashCode());
@@ -657,6 +644,8 @@ public final class Post {
             if (other.postStatus != null)
                 return false;
         } else if (!postStatus.equals(other.postStatus))
+            return false;
+        if (postType != other.postType)
             return false;
         if (sticky == null) {
             if (other.sticky != null)

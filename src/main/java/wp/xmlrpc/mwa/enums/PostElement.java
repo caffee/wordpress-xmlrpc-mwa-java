@@ -33,6 +33,7 @@ public enum PostElement {
     POST_ID                ("postid"),
     TITLE                  ("title"),
     DESCRIPTION            ("description"),
+    POST_TYPE              ("post_type"),
     LINK                   ("link"),
     USER_ID                ("userid"),
     DATE_CREATED           ("dateCreated"),
