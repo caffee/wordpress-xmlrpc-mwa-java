@@ -71,7 +71,7 @@ public final class MediaData {
     }
 
     public final void setOverwrite(final Overwrite overwrite) {
-        this.overwrite = overwrite.getBooleanValue();
+        this.overwrite = (overwrite == null) ? null : overwrite.getBooleanValue();
     }
 
     public final static Map<String, Object> parseStruct(final MediaData mediaData) {
