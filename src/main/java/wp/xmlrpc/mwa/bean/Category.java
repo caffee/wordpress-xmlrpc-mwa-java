@@ -175,7 +175,7 @@ public final class Category {
 
     public final static String[] parseNameStruct(final String... categories) {
 
-        if(categories != null && categories.length < 0) {
+        if(categories == null || categories.length == 0) {
             return null;
         }
 
