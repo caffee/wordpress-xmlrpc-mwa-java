@@ -50,7 +50,7 @@ public final class Post {
     private Date dateModifiedGmt;
     private String wpPostThumbnail;
     private String permaLink;
-    private String[] categoriesName;
+    private String[] categories;
     private String mtKeywords;
     private String mtExcerpt;
     private String mtTextMore;
@@ -165,12 +165,12 @@ public final class Post {
         this.permaLink = permaLink;
     }
 
-    public final String[] getCategoriesName() {
-        return this.categoriesName;
+    public final String[] getCategories() {
+        return this.categories;
     }
 
-    public final void setCategories(final String[] categoriesName) {
-        this.categoriesName = categoriesName;
+    public final void setCategories(final String[] categories) {
+        this.categories = categories;
     }
 
     public final String getMtKeywords() {
@@ -321,8 +321,8 @@ public final class Post {
             map.put(PostElement.DATE_CREATED_GMT.toString(), post.getDateCreatedGmt());
         }
 
-        if(post.getCategoriesName() != null && post.getCategoriesName().length > 0) {
-            map.put(PostElement.CATEGORIES.toString(), post.getCategoriesName());
+        if(post.getCategories() != null && post.getCategories().length > 0) {
+            map.put(PostElement.CATEGORIES.toString(), post.getCategories());
         }
 
         if(post.getMtKeywords() != null && !post.getMtKeywords().isEmpty()) {
@@ -529,7 +529,7 @@ public final class Post {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + Arrays.hashCode(categoriesName);
+        result = prime * result + Arrays.hashCode(categories);
         result = prime * result + Arrays.hashCode(customFields);
         result = prime * result + ((dateCreated == null) ? 0 : dateCreated.hashCode());
         result = prime * result + ((dateCreatedGmt == null) ? 0 : dateCreatedGmt.hashCode());
@@ -569,7 +569,7 @@ public final class Post {
         if (getClass() != obj.getClass())
             return false;
         Post other = (Post) obj;
-        if (!Arrays.equals(categoriesName, other.categoriesName))
+        if (!Arrays.equals(categories, other.categories))
             return false;
         if (!Arrays.equals(customFields, other.customFields))
             return false;
