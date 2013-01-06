@@ -50,7 +50,7 @@ public final class Post {
     private Date dateModifiedGmt;
     private String wpPostThumbnail;
     private String permaLink;
-    private String[] categories;
+    private Object[] categories;
     private String mtKeywords;
     private String mtExcerpt;
     private String mtTextMore;
@@ -165,11 +165,11 @@ public final class Post {
         this.permaLink = permaLink;
     }
 
-    public final String[] getCategories() {
+    public final Object[] getCategories() {
         return this.categories;
     }
 
-    public final void setCategories(final String[] categories) {
+    public final void setCategories(final Object[] categories) {
         this.categories = categories;
     }
 
@@ -455,7 +455,7 @@ public final class Post {
         }
 
         if(map.containsKey(PostElement.CATEGORIES.toString())) {
-            post.setCategories(Category.nameOf((Object[])map.get(PostElement.CATEGORIES.toString())));
+            post.setCategories((Object[])map.get(PostElement.CATEGORIES.toString()));
         }
 
         if(map.containsKey(PostElement.MT_KEYWORDS.toString())) {
