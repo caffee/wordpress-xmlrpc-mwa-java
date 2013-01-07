@@ -158,6 +158,36 @@ public final class Category {
         return category;
     }
 
+    public final static String[] nameOf(final Object[] object) {
+
+        if (object == null || object.length == 0) {
+            return null;
+        }
+
+        String[] categories = new String[object.length];
+
+        for (int i=0; i<object.length; i++) {
+            categories[i] = (String)object[i];
+        }
+
+        return categories;
+    }
+
+    public final static Object[] parseNameStruct(final String[] categories) {
+
+        if (categories == null || categories.length == 0) {
+            return null;
+        }
+
+        Object[] object = new Object[categories.length];
+
+        for (int i=0; i<categories.length; i++) {
+            object[i] = categories[i];
+        }
+
+        return object;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
