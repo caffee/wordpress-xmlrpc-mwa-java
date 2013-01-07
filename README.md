@@ -10,6 +10,21 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 
 WordPress is the trademark of WordPress Foundation
 
+Installation
+------------
+Install the package into the local repository, for use as a local dependency   
+<code>mvn clean install</code>  
+
+Usage
+-----
+Add the following into your POM's \<dependencies\> section  
+```xml
+<dependency>  
+   <groupId>wordpress</groupId>  
+   <artifactId>wordpress-xmlrpc-mwa</artifactId>  
+   <version>1.0.0-SNAPSHOT</version>  
+</dependency>
+```
 License
 -------
 Copyright (c) 2012, Lee \<lee.github@gmail.com\> or third-party contributors as indicated by the @author  
