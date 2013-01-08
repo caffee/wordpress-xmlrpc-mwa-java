@@ -25,6 +25,10 @@ Add the following into your POM's \<dependencies\> section
    <version>1.0.0-SNAPSHOT</version>  
 </dependency>
 ```
+
+Generate javadoc for API reference  
+<code>mvn javadoc:javadoc</code>  
+
 License
 -------
 Copyright (c) 2012, Lee \<lee.github@gmail.com\> or third-party contributors as indicated by the @author  
