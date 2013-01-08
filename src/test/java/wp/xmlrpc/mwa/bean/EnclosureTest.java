@@ -69,7 +69,7 @@ public class EnclosureTest {
         Map<String, Object > map = Enclosure.parseStruct(this.target);
 
         assertEquals(URL,    (String)map.get(EnclosureElement.URL.toString()));
-        assertEquals(LENGTH, (int)map.get(EnclosureElement.LENGTH.toString()));
+        assertEquals(LENGTH, ((Integer)map.get(EnclosureElement.LENGTH.toString())).intValue());
         assertEquals(TYPE,   (String)map.get(EnclosureElement.TYPE.toString()));
     }
 
