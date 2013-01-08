@@ -4,7 +4,7 @@
 
   <groupId>wordpress</groupId>
   <artifactId>wordpress-xmlrpc-mwa</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>WordPress XML-RPC MetaWeblogAPI</name>
