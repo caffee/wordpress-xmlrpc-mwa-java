@@ -22,7 +22,7 @@ Add the following into your POM's \<dependencies\> section
 <dependency>  
    <groupId>wordpress</groupId>  
    <artifactId>wordpress-xmlrpc-mwa</artifactId>  
-   <version>1.0.0</version>  
+   <version>1.0.1-SNAPSHOT</version>  
 </dependency>
 ```
 
